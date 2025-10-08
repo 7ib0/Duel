@@ -1,0 +1,16 @@
+name: duel
+version: '1.0-SNAPSHOT'
+main: me.tibo.duel.Duel
+api-version: '1.21'
+description: A plugin that allows players to challenge each other to duels.
+
+commands:
+  duel:
+    description: Challenge another player to a duel.
+    usage: /<command> <player>
+  duel-leaderboard:
+    description: Show duel leaderboard.
+    usage: /<command>
+  duel-lb:
+    description: Show duel leaderboard.
+    usage: /<command>
