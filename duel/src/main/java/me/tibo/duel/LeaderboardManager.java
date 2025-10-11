@@ -25,7 +25,7 @@ class LeaderboardManager implements CommandExecutor {
         this.plugin = plugin;
         loadStats();
     }
-
+// load stats
     private void loadStats() {
         leaderboardFile = new File(plugin.getDataFolder(), "leaderboard.yml");
         if (!leaderboardFile.exists()) {
@@ -44,7 +44,7 @@ class LeaderboardManager implements CommandExecutor {
             }
         }
     }
-
+// save stats
     public void saveStats() {
         for (Map.Entry<UUID, Integer> entry : duelWins.entrySet()) {
             leaderboardConfig.set("wins." + entry.getKey().toString(), entry.getValue());
@@ -101,3 +101,4 @@ class LeaderboardManager implements CommandExecutor {
         return true;
     }
 }
+
