@@ -18,7 +18,7 @@ class ArenaManager {
         this.plugin = plugin;
         loadArenas();
     }
-
+// load arena's from config
     private void loadArenas() {
         FileConfiguration config = plugin.getConfig();
         if (!config.contains("arenas.bedrock_box.world")) {
@@ -63,12 +63,12 @@ class ArenaManager {
             World w = Bukkit.getWorld(world);
             return new Location(w, (minX + maxX) / 2.0 + 0.5, minY + 1, (minZ + maxZ) / 2.0 + 0.5);
         }
-
+// spawn for player 1
         public Location getSpawn1() {
             World w = Bukkit.getWorld(world);
             return new Location(w, minX + 2.5, minY + 1, minZ + 2.5);
         }
-
+// spawn for player 2
         public Location getSpawn2() {
             World w = Bukkit.getWorld(world);
             return new Location(w, maxX - 2.5, minY + 1, maxZ - 2.5);
@@ -101,7 +101,7 @@ class ArenaManager {
                 for (int y = minY + 1; y < maxY; y++) {
                     for (int z = minZ + 1; z < maxZ; z++) {
                         if ((x + y + z) % 7 == 0) {
-                            w.getBlockAt(x, y, z).setType(Material.LIGHT);
+                            w.getBlockAt(x, y, z).setType(Material.LIGHT); // set lights
                         }
                     }
                 }
@@ -109,3 +109,4 @@ class ArenaManager {
         }
     }
 }
+
