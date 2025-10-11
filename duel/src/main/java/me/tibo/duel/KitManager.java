@@ -30,6 +30,7 @@ class KitManager implements CommandExecutor {
         kitsFile = new File(plugin.getDataFolder(), "kits.yml");
         if (!kitsFile.exists()) {
             try {
+                // set default kits
                 kitsFile.getParentFile().mkdirs();
                 kitsFile.createNewFile();
                 YamlConfiguration def = new YamlConfiguration();
@@ -178,3 +179,4 @@ class KitManager implements CommandExecutor {
         }
     }
 }
+
