@@ -40,7 +40,7 @@ class ArenaManager {
     public static class Arena {
         public final String world;
         public final int minX, minY, minZ, maxX, maxY, maxZ;
-
+// set arena coords
         public Arena(String world, List<Integer> c1, List<Integer> c2) {
             this.world = world;
             this.minX = Math.min(c1.get(0), c2.get(0));
@@ -109,4 +109,5 @@ class ArenaManager {
         }
     }
 }
+
 
